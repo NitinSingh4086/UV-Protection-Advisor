@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@100,200;400,700&display=swap"
+        rel="stylesheet">
+
+    <title>UV Protector</title>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="weather_title">
+            UV Protector
+        </div>
+        <div class="locationDate">
+            <div class="location">
+                <span class="countryLocation">Edmonton, AB UV Index</span><br>
+                <span class="time"> 12:30 <span class="am-pm"> PM</span></span>
+            </div>
+            <div class="date">
+                Wednesday, September 10
+            </div>
+        </div>
+
+        <div class="Today-info">
+            <div class="temperature">
+                13°
+            </div>
+            <div class="weather_description">
+                Mostly clear
+            </div>
+            <div class="high_and_low">
+                <div class="high">
+                    H:25°
+                </div>
+                <div class="low">
+                    L: 13°
+                </div>
+            </div>
+        </div>
+
+
+        <div class="uv-index">
+            <section class="uv-card">
+                <div class="label">Current UV</div>
+                <div class="uv">
+                    <div class="uv-number" id="CurrentUV">2</div>
+                    <div class="uv-text" id="uv_text">Low</div>
+                </div>
+            </section>
+
+            <section class="uv-card">
+                <div class="label">Daily Max </div>
+                <div class="uv">
+                    <div class="uv-number" id="dailyMaxUV">2</div>
+                    <div class="uv-text" id="dailyMaxText">Low</div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="legend">
+            <div class="quality_description">
+                <button class="Low">Low</button>
+                <button class="Moderate">Moderate</button>
+                <button class="High">High</button>
+                <button class="Very_High">Very High</button>
+                <button class="Extreme">Extreme</button>
+            </div>
+            <div class="description_Paragraph">
+                <p class="paragraph">
+                    Low: 0-2<br><br>
+                    Minimal sun protection required for normal activity. Wear sunglasses on bright days. If outside
+                    for more than one hour, cover up and use sunscreen. Reflection off snow can nearly double UV
+                    strength, so wear sunglasses and apply sunscreen on your face.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+
+    
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: url("/background1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;   
+    height: 100vh;
+}
+.Container{
+    padding: 20px 70px;
+    color: #fff;
+}
+.weather_title{
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    font-size: xx-large;
+}
+.locationDate{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.location{
+    font-size: 40px;
+    font-weight: 100;
+}
+.date{
+    font-size: x-large;
+}
+.time{
+    font-size: 70px;
+}
+.am-pm{
+    font-size: 30px;
+    margin: 20px;
+}
+
+.temperature{
+    font-size: 32px;
+}
+.weather_description{
+    font-size: 30px;
+}
+.Today-info{
+    display: flex;
+    justify-content: space-around;
+    color: blue;
+    font-size: 28px;
+    font-weight: 200;
+    padding: 50px;
+}
+/* Container: one card per row (grid for easy spacing) */
+.uv-index{
+  display:grid;
+  gap:12px;
+}
+
+/* Card styling */
+.uv-card{
+  background: #FAFDD6;           /* soft green */
+  border:2px solid #647FBC;
+  border-radius:10px;
+  padding:16px 18px;
+  display:grid;
+  grid-template-columns: 1fr auto; /* label left, value block right */
+  align-items:center;
+}
+
+/* Label (left side) */
+.uv-card .label{
+  font:600 22px/1.2 system-ui, sans-serif;
+  color:#19183B;
+}
+
+/* Value block (right side): number + text as a small grid */
+.uv{
+  display:grid;
+  grid-auto-flow:column;
+  gap:12px;
+  align-items:center;
+}
+
+/* Number box */
+.uv-number{
+  font:700 34px/1 system-ui, sans-serif;
+  padding:10px 16px;
+  border:3px solid #647FBC;
+  border-radius:8px;
+  background:#fff;
+  color:#2f3a2f;
+  text-align:center;
+  min-width:48px;
+}
+
+/* Text + tiny bar */
+.uv-text{
+  font:700 28px/1 system-ui, sans-serif;
+  color:#3b4a3b;
+  position:relative;
+  padding-right:4px;
+}
+.uv-text::after{
+  content:"";
+  display:block;
+  height:6px;
+  width:70px;
+  background:#647FBC;
+  border-radius:3px;
+  margin-top:6px;
+}
+
+/* Small tweaks on narrow screens */
+@media (max-width:520px){
+  .uv-card{
+    grid-template-columns: 1fr; /* stack label above value */
+    gap:10px;
+  }
+  .uv-number{ font-size:30px; }
+  .uv-text{ font-size:24px; }
+}
+
+.legend{
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+}
+.legend .quality_description{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 40%;
+    flex-wrap: wrap;
+}
+.legend .quality_description button{
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid;
+    cursor: pointer;  
+    
+}
+
+.legend .quality_description button:focus-visible,
+.legend .quality_description button:active{
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 3px red;
+}
+
+.legend .description_Paragraph{
+    font-size: 20px;
+    font-weight: 450;
+    border: 4px solid;
+    border-color: black;
+}
+
+.legend .quality_description .Low{
+  background:#f1fbdc; color:#2f3a2f; border-color:#8dd11c;
+}
+.legend .quality_description .Moderate{
+  background:#fff6cc; color:#5a4b00; border-color:#f1c40f;
+}
+.legend .quality_description .High{
+  background:#ffe8d6; color:#5a2b00; border-color:#e67e22;
+}
+.legend .quality_description .Very_High{
+  background:#ffe0e0; color:#6b1111; border-color:#e74c3c;
+}
+.legend .quality_description .Extreme{
+  background:#f3e5f5; color:#4a1458; border-color:#8e44ad;
+}
+
+.legend .quality_description button.is-selected{
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 3px currentColor;
+}
