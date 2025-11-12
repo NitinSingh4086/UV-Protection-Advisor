@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(bodyparser.json());
 app.use(express.static("public"));
@@ -70,4 +71,6 @@ app.get("/api/weather", async (req, res) => {
     res.status(500).json({ error: "weather fetch failed" });
   }
 });
-
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
